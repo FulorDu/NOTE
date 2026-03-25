@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>筆記本</h2>
+                <div class="header-btns">
+                    <button id="add-folder-btn" class="icon-btn outline" title="新增資料夾" style="width: 32px; height: 32px; font-size: 0.85rem;"><i class="fa-solid fa-folder-plus"></i></button>
+                    <button id="add-btn" class="icon-btn" title="新增分頁" style="width: 32px; height: 32px; font-size: 0.85rem;"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+            <ul id="tab-list" class="tab-list">
+                <!-- Tabs will be dynamically inserted here -->
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <input type="text" id="note-title" placeholder="輸入標題..." autocomplete="off">
+                <div class="header-actions">
+                    <div class="font-controls">
+                        <button id="font-decrease" class="icon-btn small" title="縮小字體"><i class="fa-solid fa-minus"></i></button>
+                        <span id="font-size-display">18px</span>
+                        <button id="font-increase" class="icon-btn small" title="放大字體"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <p id="save-status" class="save-status">已儲存</p>
+                </div>
+            </header>
+            <textarea id="note-content" placeholder="開始您的撰寫..."></textarea>
+        </main>
+    </div>
+
+    <!-- Move Note Modal -->
+    <div id="move-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>加入已有筆記</h3>
+            <p>選擇要移入此資料夾的筆記：</p>
+            <select id="move-note-select" class="styled-select"></select>
+            <div class="modal-actions">
+                <button id="move-cancel-btn" class="btn outline">取消</button>
+                <button id="move-confirm-btn" class="btn primary">確認移入</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
