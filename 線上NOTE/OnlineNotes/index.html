@@ -29,6 +29,10 @@
             <header class="content-header">
                 <input type="text" id="note-title" placeholder="輸入標題..." autocomplete="off">
                 <div class="header-actions">
+                    <button id="save-btn" class="icon-btn" title="手動儲存 (Ctrl+S)" style="color: var(--primary-color, #4a6fa5); border: 1px solid var(--primary-color, #4a6fa5); border-radius: 6px; padding: 0 12px; font-weight: 500; font-size: 0.9rem; width: auto;"><i class="fa-solid fa-floppy-disk" style="margin-right: 5px;"></i>儲存</button>
+                    <label for="import-file" id="import-btn" class="icon-btn" title="匯入備份檔 (還原資料)" style="cursor: pointer; color: #28a745; border: 1px solid #28a745; border-radius: 6px; padding: 0 12px; font-weight: 500; font-size: 0.9rem; width: auto; display: inline-flex; align-items: center; justify-content: center; margin-left: 5px;"><i class="fa-solid fa-upload" style="margin-right: 5px;"></i>匯入</label>
+                    <input type="file" id="import-file" accept=".json" style="display: none;">
+                    <button id="export-btn" class="icon-btn save-backup" title="下載備份檔 (避免資料遺失)" style="margin-left: 5px;"><i class="fa-solid fa-download"></i></button>
                     <div class="font-controls">
                         <button id="font-decrease" class="icon-btn small" title="縮小字體"><i class="fa-solid fa-minus"></i></button>
                         <span id="font-size-display">18px</span>
